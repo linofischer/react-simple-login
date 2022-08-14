@@ -1,5 +1,5 @@
 {
-  "name": "simple-login",
+  "name": "simple-react-login-window",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,8 +20,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "rollup": "rollup -c"
   },
+  "author": "Lino Fischer",
+  "license": "MIT",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -39,5 +42,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.4",
+    "rollup": "^2.78.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-postcss": "^4.0.2"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts"
 }

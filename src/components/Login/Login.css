@@ -1,0 +1,112 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5em;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+label {
+    text-align: start;
+    margin-right: 0.5em;
+}
+
+.gap {
+    height: 0.5em;
+}
+
+.card {
+    max-width: 500px;
+    height: 320px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    padding: 0 1em 0 1em;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+button {
+    background-color: darkgrey;
+    border: none;
+    border-radius: 5%;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 1em
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: grey;
+}
+
+.login-faild-message {
+    color: red;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+td {
+    padding-right: 1em;
+    text-align: initial;
+}
+
+.loading-spinner {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: grey;
+    opacity: 0.5;
+    z-index: 50;
+}
+
+.lds-dual-ring {
+    margin: auto;
+    z-index: 100;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    position:absolute;
+    margin-top: 10%;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid black;
+    border-color: black transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
