@@ -36,4 +36,4 @@ declare type LoginProps = {
 } & VariantsOfCredentials;
 declare const Login: ({ credentials, checkCredentials, formEvents, loginFailedMessage, headline, }: LoginProps) => JSX.Element;
 
-export { Login as Button };
+export { Login };

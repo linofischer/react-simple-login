@@ -2999,5 +2999,5 @@ var Login = function (_a) {
                         " ", loginFailedMessage !== null && loginFailedMessage !== void 0 ? loginFailedMessage : React.createElement("span", null, "Invalid credentials.")))));
 };
 
-exports.Button = Login;
+exports.Login = Login;
 //# sourceMappingURL=index.js.map
