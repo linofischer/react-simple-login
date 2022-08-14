@@ -1,5 +1,8 @@
 {
-  "name": "simple-react-login-window",
+  "name": "@linofischer/simple-react-login-window",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/linofischer"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
