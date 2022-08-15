@@ -6,10 +6,8 @@
   "version": "0.1.9",
   "description": "A simple react based login window.",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "prepare": "husky install",
     "test": "jest",
-    "eject": "react-scripts eject",
     "rollup": "rollup -c"
   },
   "author": "Lino Fischer",
@@ -36,6 +34,7 @@
     "@types/react-dom": "^18.0.6",
     "babel-jest": "^28.1.3",
     "css-loader": "^6.5.1",
+    "husky": "^8.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^28.1.3",
     "jest-environment-jsdom": "^28.1.3",
