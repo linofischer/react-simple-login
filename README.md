@@ -64,7 +64,7 @@ export type LoginProps = {
 />
 ```
 
-#### **credentials** - use password an username, the component check if it matches the input (DO NOT USE IN PRODUCTION): 
+#### **credentials** - use password (and username), the component then checks if it matches the input fields (DO NOT USE IN PRODUCTION): 
 ```typescript
 <Login
     credentials={{
