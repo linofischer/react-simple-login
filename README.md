@@ -9,6 +9,7 @@ Use npm to install the package.
 ```bash
 npm install @linofischer/simple-react-login-window
 ```
+![login image](https://raw.githubusercontent.com/linofischer/simple-react-login-window/master/src/assets/Login.png)
 
 ## LoginProps
 #### You have to use one of theses attributes:  **formEvents**, **credentials** or **checkCredentials**!
