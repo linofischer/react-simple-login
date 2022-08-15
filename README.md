@@ -30,13 +30,13 @@ export type LoginProps = {
         username?: string;
         // If the login was successfull, save a flag in localstorage to
         // skip login next time
-        saveLoginStateToLocalStorage?: boolean;
+        saveLoginStateToLocalStorage?: boolean = false;
     },
 // Function to check credentials
     checkCredentials?: {
         checkPassword: (password: string, username?: string) => Promise<boolean>;
         // If a username is needed in the function above
-        username?: boolean;
+        username?: boolean = false;
     },
     // Get the raw events
     formEvents?: {
@@ -47,7 +47,7 @@ export type LoginProps = {
         // Username input field value changed
         onUsernameChange?: (username: string) => void;
         // Show "wrong username/password" message
-        showLoginFailedMessage?: boolean;
+        showLoginFailedMessage?: boolean = true;
     }
 } 
 ```
@@ -80,13 +80,13 @@ export type LoginProps = {
 <Login
     checkCredentials={{
         checkPassword: async (password: string, username: string) => {
-        // await anyAsyncFunction();    
-        // return resultof anyAsyncFunction
-        console.log("username", username);
-        console.log("password", password);
-        return true;
+            // await anyAsyncFunction();    
+            // return resultof anyAsyncFunction
+            console.log("username", username);
+            console.log("password", password);
+            return true;
         },
-    username: true
+        username: true
     }}
 />
 
