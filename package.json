@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/linofischer"
   },
-  "version": "0.1.9",
+  "version": "1.0.0",
   "description": "A simple react based login window.",
   "scripts": {
     "prepare": "husky install",

@@ -171,7 +171,7 @@ var Login = function (_a) {
         }
     }
     function handlePasswordChange(event) {
-        setLoginData(__assign(__assign({}, credentials), { password: event.currentTarget.value }));
+        setLoginData(__assign(__assign({}, loginData), { password: event.currentTarget.value }));
         setInvalidCredentials(false);
         if (formEvents) {
             formEvents.onPasswordChange(event.currentTarget.value);
