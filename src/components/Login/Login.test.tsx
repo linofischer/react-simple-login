@@ -173,8 +173,10 @@ describe('Check Credentials function', () => {
         }, { timeout: 1000 });
         // valid username and pw
         expect(login).toBe(false);
-        fireEvent.change(passwordInput, { target: { value: PASSWORD } });
+        // first change to invalid pw
+        fireEvent.change(passwordInput, { target: { value: 'PASSWORD' } });
         fireEvent.change(usernameInput, { target: { value: USERNAME } });
+        fireEvent.change(passwordInput, { target: { value: PASSWORD } });
         fireEvent.click(loginButton);
         const loadingSpinnerTwo = screen.getByTestId('loading-spinner');
         expect(loadingSpinnerTwo).toBeInTheDocument();

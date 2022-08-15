@@ -1,20 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import './Login.css';
 
+// Credentials to check if passwort (and username) is corect. DO NOT USE THIS IN PRODUCTION!
 interface Credentials {
     credentials: {
+        // Callback true if the credentials matching (login success), false if not
         callback: (loginSuccess: boolean) => void;
+        // Passowrd
         password: string;
+        // Username
         username?: string;
+        // If the login was successfull, save a flag in localstorage to skip login next time
         saveLoginStateToLocalStorage?: boolean;
     }
     checkCredentials?: never;
     formEvents?: never;
 }
 type CheckPassword = (password: string) => Promise<boolean>;
+// Function to check credentials
 type CheckUsernameAndPassword = (password: string, username: string) => Promise<boolean>;
 interface CheckCredentials {
     checkCredentials: {
+        // Function that check if password (and username) matching
         checkPassword: CheckPassword | CheckUsernameAndPassword;
         username?: boolean;
     }
@@ -22,11 +29,16 @@ interface CheckCredentials {
     formEvents?: never;
 }
 
+// Events 
 interface FormEvents {
     formEvents: {
+        // Password input field value changes
         onPasswordChange: (password: string) => void;
+        // Login button clicked
         onLoginTrigger: (logintriggered: true) => void;
+        // Username input field value changes
         onUsernameChange?: (username: string) => void;
+        // Show "wrong username/password" message
         showLoginFailedMessage?: boolean;
     }
     credentials?: never;
@@ -37,7 +49,9 @@ type VariantsOfCredentials = Credentials | CheckCredentials | FormEvents;
 
 
 export type LoginProps = {
+    // Headline of the window
     headline?: string;
+    // Customize login failed message
     loginFailedMessage?: string;
 } & VariantsOfCredentials;
 
@@ -107,7 +121,7 @@ const Login = ({
     }
 
     function handlePasswordChange(event: React.FormEvent<HTMLInputElement>) {
-        setLoginData({ ...credentials, password: event.currentTarget.value })
+        setLoginData({ ...loginData, password: event.currentTarget.value })
         setInvalidCredentials(false);
         if (formEvents) {
             formEvents.onPasswordChange(event.currentTarget.value);
