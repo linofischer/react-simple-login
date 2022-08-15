@@ -7,7 +7,7 @@ This is a simple react based login window.
 Use npm to install the package.
 
 ```bash
-npm install @linofischer/simple-react-login-window
+npm install @linofischer/react-simple-login
 ```
 ![login image](https://raw.githubusercontent.com/linofischer/simple-react-login-window/master/src/assets/Login.png)
 
@@ -57,10 +57,11 @@ export type LoginProps = {
 ```typescript
 <Login
     formEvents={{
-        onPasswordChange: (password: string) =>  console.log("password": password)
-        onUsernameChange: (username: string) =>  console.log("username": username)
-        onLoginTrigger: (sucess: true) =>  console.log("loginSuccess": success)
-}}></Login>
+        onPasswordChange: (password: string) =>  console.log("password", password),
+        onUsernameChange: (username: string) => console.log("username", username),
+        onLoginTrigger: (loginClicked: true) => console.log("loginClicked", loginClicked)
+    }}
+/>
 ```
 
 #### **credentials** - use password an username, the component check if it matches the input (DO NOT USE IN PRODUCTION): 
@@ -70,7 +71,8 @@ export type LoginProps = {
         password: '1234',
         username: 'user',
         callback:(success: boolean) => {console.log('Login success', success)}
-}}></Login>
+    }}
+/>
 ```
 
 #### **checkCredentials** - use a function that checks the password (and username):
@@ -85,7 +87,8 @@ export type LoginProps = {
         return true;
         },
     username: true
-        }}></Login>
+    }}
+/>
 
 ```
 
