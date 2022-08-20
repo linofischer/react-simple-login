@@ -29,3 +29,24 @@ FormEvents.args = {
         onLoginTrigger: console.log
     }
 };
+
+async function checkPasswordAndUsername(pw: string, user: string): Promise<boolean> {
+    return new Promise(resolve => {
+        setTimeout(function () {
+            if (pw === 'password' && user === 'username') {
+                resolve(true);
+                console.log(true);
+            } else {
+                resolve(false);
+                console.log(false);
+            }
+        });
+    });
+};
+export const CheckCredentials = Template.bind({});
+CheckCredentials.args = {
+    checkCredentials: {
+        checkPassword: checkPasswordAndUsername,
+        username: true,
+    }
+}
