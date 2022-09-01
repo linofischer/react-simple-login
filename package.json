@@ -4,7 +4,7 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A simple react based login window.",
   "keywords": [
     "react",
@@ -66,15 +66,17 @@
     "react-test-renderer": "^18.2.0",
     "rollup": "^2.60.0",
     "rollup-plugin-dts": "^4.0.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4",
     "webpack": "^5.74.0"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18",
+    "react-dom": "^18"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
